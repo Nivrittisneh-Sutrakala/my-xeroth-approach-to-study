@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>कला के माध्यम से मानसिक स्वास्थ्य एवं मनोविज्ञान</title>
+  <style>
+    /* Basic reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #111;
+      line-height: 1.35;
+      padding: 36px 18px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Big heading */
+    .site-title {
+      font-weight: 800;
+      font-size: clamp(28px, 5.6vw, 56px);
+      letter-spacing: -0.5px;
+      margin-bottom: 26px;
+      text-align: left;
+    }
+
+    /* Grid: 3 per row on desktop, 2 on tablet, 1 on mobile */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px)  { .grid { grid-template-columns: 1fr; } }
+
+    /* Card as a clickable block with background image */
+    .card {
+      display: block;
+      position: relative;
+      min-height: 220px;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      background-color: #ddd;
+      box-shadow: 0 6px 18px rgba(16,18,20,0.06);
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+
+    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(16,18,20,0.08); }
+
+    .card .bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.75) saturate(0.95);
+      transition: transform .5s ease, filter .3s ease;
+    }
+    .card:hover .bg { transform: scale(1.04); filter: brightness(0.78) saturate(1); }
+
+    /* Title overlay at bottom */
+    .card .title-wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 18px;
+      z-index: 3;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.56) 100%);
+    }
+
+    .card .title {
+      font-weight: 800;
+      font-size: clamp(16px, 2.2vw, 20px);
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    /* Small meta badge (optional) */
+    .card .meta {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 5px 8px;
+      background: rgba(255,255,255,0.9);
+      color: #111;
+      font-weight: 700;
+      font-size: 11px;
+      border-radius: 3px;
+    }
+
+    /* Make sure links look clean */
+    .card:focus { outline: 3px solid rgba(0,120,255,0.12); }
+
+    /* Accessible but hidden text for screen readers */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    /* Citations at page end: basic serif font, small */
+    .citations {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid #e6e6e6;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 13px;
+      color: #111;
+      white-space: pre-wrap;
+    }
+
+    /* Very small-screen tweak */
+    @media (max-width: 420px) {
+      .site-title { font-size: 28px; }
+      .card { min-height: 180px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+    <h1 class="site-title">कला के माध्यम से मानसिक स्वास्थ्य और मनोविज्ञान...</h1>
+
+    <main class="grid" aria-label="विषय ग्रिड">
+
+      <a href="vandalism-hi.html" class="card" aria-labelledby="t-vandalism">
+        <span class="bg" style="background-image:url('br9.jpg');"></span>
+        <span class="sr-only">कला विध्वंस</span>
+        <div class="title-wrap">
+          <div class="meta">विवाद</div>
+          <h2 id="t-vandalism" class="title">कला विध्वंस</h2>
+        </div>
+      </a>
+
+      <a href="basics-hi.html" class="card" aria-labelledby="t-basics">
+        <span class="bg" style="background-image:url('br2.jpg');"></span>
+        <span class="sr-only">कला मनोविज्ञान</span>
+        <div class="title-wrap">
+          <div class="meta">कला और मन</div>
+          <h2 id="t-basics" class="title">कला मनोविज्ञान</h2>
+        </div>
+      </a>
+
+      <a href="creativity-hi.html" class="card" aria-labelledby="t-creativity">
+        <span class="bg" style="background-image:url('br3.jpg');"></span>
+        <span class="sr-only">रचनात्मकता: महत्व और कार्यविधि</span>
+        <div class="title-wrap">
+          <div class="meta">रचनात्मक अभ्यास</div>
+          <h2 id="t-creativity" class="title">रचनात्मकता: महत्व और कार्यविधि</h2>
+        </div>
+      </a>
+
+      <a href="neuroscience-hi.html" class="card" aria-labelledby="t-neuro">
+        <span class="bg" style="background-image:url('br4.jpg');"></span>
+        <span class="sr-only">तंत्रिका विज्ञान में कला</span>
+        <div class="title-wrap">
+          <div class="meta">तंत्रिका सौंदर्यशास्त्र</div>
+          <h2 id="t-neuro" class="title">तंत्रिका विज्ञान में कला</h2>
+        </div>
+      </a>
+
+      <a href="therapy-hi.html" class="card" aria-labelledby="t-therapy">
+        <span class="bg" style="background-image:url('br5.jpg');"></span>
+        <span class="sr-only">कला चिकित्सा</span>
+        <div class="title-wrap">
+          <div class="meta">चिकित्सा</div>
+          <h2 id="t-therapy" class="title">कला चिकित्सा</h2>
+        </div>
+      </a>
+
+      <a href="communications-hi.html" class="card" aria-labelledby="t-comm">
+        <span class="bg" style="background-image:url('br6.jpg');"></span>
+        <span class="sr-only">दृश्य संचार</span>
+        <div class="title-wrap">
+          <div class="meta">अभिकल्प</div>
+          <h2 id="t-comm" class="title">दृश्य संचार</h2>
+        </div>
+      </a>
+
+      <a href="psychophysics-hi.html" class="card" aria-labelledby="t-psycho">
+        <span class="bg" style="background-image:url('br7.jpg');"></span>
+        <span class="sr-only">कला के माध्यम से मनोभौतिकी</span>
+        <div class="title-wrap">
+          <div class="meta">धारणा</div>
+          <h2 id="t-psycho" class="title">कला के माध्यम से मनोभौतिकी</h2>
+        </div>
+      </a>
+
+      <a href="social-hi.html" class="card" aria-labelledby="t-social">
+        <span class="bg" style="background-image:url('br8.jpg');"></span>
+        <span class="sr-only">कला का सामाजिक मनोविज्ञान</span>
+        <div class="title-wrap">
+          <div class="meta">समाज</div>
+          <h2 id="t-social" class="title">कला का सामाजिक मनोविज्ञान</h2>
+        </div>
+      </a>
+
+      <a href="feminism-hi.html" class="card" aria-labelledby="t-fem">
+        <span class="bg" style="background-image:url('br1.jpg');"></span>
+        <span class="sr-only">मानसिक स्वास्थ्य और नारीवाद</span>
+        <div class="title-wrap">
+          <div class="meta">हरित क्रांति</div>
+          <h2 id="t-fem" class="title">मानसिक स्वास्थ्य और नारीवाद</h2>
+        </div>
+      </a>
+
+    </main>
+
+    <style>
+    .citations-container {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        font-size: 14px; /* Base body size */
+        line-height: 1.6;
+    }
+
+    .citations-container h2 {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: calc(14px + 2pt); /* Two sizes larger than body */
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .citations-list {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .citations-list li {
+        margin-bottom: 12px;
+    }
+    
+    .citations-list a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    
+    .citations-list a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<style>
+    .citations-container {
+        font-family: "Comic Sans MS", "Comic Sans", cursive, "Arial Unicode MS", sans-serif;
+        font-size: 16px; 
+        line-height: 1.8;
+        direction: ltr;
+        text-align: left;
+        color: #333;
+        padding: 20px;
+    }
+
+    .citations-container h2 {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", sans-serif;
+        font-size: 24px; 
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .citations-list {
+        list-style-type: disc;
+        padding-left: 25px;
+    }
+
+    .citations-list li {
+        margin-bottom: 15px;
+    }
+
+    .citations-list a {
+        color: #0066cc;
+        text-decoration: none;
+        word-wrap: break-word;
+        font-size: 0.9em;
+    }
+
+    .citations-list a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="citations-container" lang="hi">
+    <h2>संदर्भ ग्रंथ सूची </h2>
+    <ul class="citations-list">
+        <li>अगुआयो। (न.द.)। डिजिटल डिज़ाइन में रंगों का मनोविज्ञान: एक प्रभावशाली अनुभव के लिए रणनीतियाँ। <a href="https://aguayo.co/en/blog-aguayo-user-experience/the-psychology-of-color-in-digital-design/">https://aguayo.co/en/blog-aguayo-user-experience/the-psychology-of-color-in-digital-design/</a></li>
+        
+        <li>अल-रदैदेह, ए. (2025)। व्यक्तित्व के कौन से गुण कलात्मक प्राथमिकताओं को प्रभावित करते हैं? एक मात्रात्मक दृष्टिकोण। पाकिस्तान जर्नल ऑफ लाइफ एंड सोशल साइंसेज, 23(2), 1028-1041। <a href="https://www.pjlss.edu.pk/pdf_files/2025_2/1028-1041.pdf">https://www.pjlss.edu.pk/pdf_files/2025_2/1028-1041.pdf</a></li>
+
+<li>अमेरिकन आर्ट थेरेपी एसोसिएशन। (न.द.)। कला चिकित्सा के बारे में। <a href="https://arttherapy.org/about-art-therapy/">https://arttherapy.org/about-art-therapy/</a></li>
+
+<li>आर्नहाइम, आर. (1966)। कला के मनोविज्ञान की ओर। यूनिवर्सिटी ऑफ कैलिफोर्निया प्रेस। <a href="https://www.ucpress.edu/books/toward-a-psychology-of-art/paper">https://www.ucpress.edu/books/toward-a-psychology-of-art/paper</a></li>
+
+<li>आर्नहाइम, आर. (1974)। कला और दृश्य धारणा: रचनात्मक आँख का एक मनोविज्ञान। यूनिवर्सिटी ऑफ कैलिफोर्निया प्रेस। <a href="https://medicina.fmpfase.edu.br/Download_PDFs/academics/U68752/RudolfArnheimArtAndVisualPerception.pdf">https://medicina.fmpfase.edu.br/Download_PDFs/academics/U68752/RudolfArnheimArtAndVisualPerception.pdf</a></li>
+
+<li>बाल्टेस, पी. बी., रयूटर-लोरेंज़, पी. ए., और रोस्लर, एफ. (2006)। विकासात्मक मनोविज्ञान में जीवन काल सिद्धांत। <a href="https://pure.mpg.de/pubman/item/item_2100870_9/component/file_2100869/PB_Life_2006.pdf">https://pure.mpg.de/pubman/item/item_2100870_9/component/file_2100869/PB_Life_2006.pdf</a></li>
+
+<li>बीयर, जे. एस. (2025)। न्यूरोएस्थेटिक्स: तंत्रिका पुनर्वास में सौंदर्य अनुभव की भूमिका की खोज। फ्रंटियर्स इन साइकोलॉजी, 16। <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1671220/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1671220/full</a></li>
+
+<li>बिग्नार्डी, जी., और अन्य। (2024)। रंगीन और स्थानिक छवि आँकड़े शिशुओं की दृश्य प्राथमिकताओं और वयस्कों की कला के लिए सौंदर्य संबंधी प्राथमिकताओं की भविष्यवाणी करते हैं। जर्नल ऑफ विजन, 24(10)। <a href="https://jov.arvojournals.org/article.aspx?articleid=2791356">https://jov.arvojournals.org/article.aspx?articleid=2791356</a></li>
+
+<li>बोर्नर, के., और अन्य। (2022)। कला शिक्षा के माध्यम से व्यक्तित्व परिवर्तन: एक समीक्षा और आगे के शोध का आह्वान। फ्रंटियर्स इन साइकोलॉजी, 13। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8902031/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8902031/</a></li>
+
+<li>बुलोट, एन. जे., और रेबर, आर. (2013)। कलात्मक मन: संज्ञानात्मक विज्ञान और कला के मनोविज्ञान के लिए एक अंतःविषय दृष्टिकोण। फ्रंटियर्स इन साइकोलॉजी। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6969930/">https://pmc.ncbi.nlm.nih.gov/articles/PMC6969930/</a></li>
+
+<li>सेराटो, एस. एम. (2024)। रुडोल्फ आर्नहाइम। सौंदर्यशास्त्र का अंतर्राष्ट्रीय शब्दकोश। <a href="https://lexicon.mimesisjournals.com/archive/2024/spring/Rudolf%20Arnheim.pdf">https://lexicon.mimesisjournals.com/archive/2024/spring/Rudolf%20Arnheim.pdf</a></li>
+
+<li>चमोरो-प्रेमुजिक, टी. (न.द.)। व्यक्तित्व और कला। ब्रिटिश साइकोलॉजिकल सोसाइटी। <a href="https://www.bps.org.uk/psychologist/personality-and-art">https://www.bps.org.uk/psychologist/personality-and-art</a></li>
+
+<li>चटर्जी, ए. (2011)। न्यूरोएस्थेटिक्स: परिपक्वता की एक कहानी। जर्नल ऑफ कॉग्निटिव न्यूरोसाइंस, 23(1)। <a href="https://tarjomefa.com/wp-content/uploads/2018/04/8916-English-TarjomeFa.pdf">https://tarjomefa.com/wp-content/uploads/2018/04/8916-English-TarjomeFa.pdf</a></li>
+
+<li>क्लर्क, आर. डी. (2023)। अनुभवजन्य सौंदर्यशास्त्र। इंटरनेट एनसाइक्लोपीडिया ऑफ फिलॉसफी। <a href="https://iep.utm.edu/empirical-aesthetics/">https://iep.utm.edu/empirical-aesthetics/</a></li>
+
+<li>कोबो-रेयेस, आर., और अन्य। (2023)। रचनात्मकता की धारणा के लिए सैद्धांतिक दृष्टिकोण: एक व्यवस्थित समीक्षा। रेविस्टा डी साइकोलोजिया। <a href="https://www.redalyc.org/journal/4978/497882320009/html/">https://www.redalyc.org/journal/4978/497882320009/html/</a></li>
+
+<li>डी'ओनोफ्रियो, एस. (2018)। रुडोल्फ आर्नहाइम। सौंदर्यशास्त्र का अंतर्राष्ट्रीय शब्दकोश। <a href="http://lexicon.mimesisjournals.com/international_lexicon_of_aesthetics_item_detail.php?item_id=159">http://lexicon.mimesisjournals.com/international_lexicon_of_aesthetics_item_detail.php?item_id=159</a></li>
+
+<li>डी पिसापिया, एन., और अन्य। (2016)। बर्लिन का पुनरावलोकन: चित्रों और संगीत की सराहना में सुखद स्वर की बहुआयामी प्रकृति के साक्ष्य। फ्रंटियर्स इन साइकोलॉजी, 7। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5095118/">https://pmc.ncbi.nlm.nih.gov/articles/PMC5095118/</a></li>
+
+<li>डोरलैंड, ए. (2025, 10 मार्च)। हम जो मापते हैं, वह मायने रखता है। क्रिएटिव कैपेसिटी। <a href="https://creative-capacity.com/2025/03/10/what-we-measure-matters/">https://creative-capacity.com/2025/03/10/what-we-measure-matters/</a></li>
+
+<li>डुमास, डी., और ऑर्गनिस्कियाक, पी. (2023)। रचनात्मकता की प्रक्रिया परिभाषा। क्रिएटिविटी रिसर्च जर्नल। <a href="https://www.tandfonline.com/doi/full/10.1080/10400419.2023.2254573">https://www.tandfonline.com/doi/full/10.1080/10400419.2023.2254573</a></li>
+
+<li>एकहॉफ, जी. (2017)। कला अपराध: धोखाधड़ी और फोरेंसिक। रिसर्चगेट। <a href="https://www.researchgate.net/publication/277881581_Art_crime_Fraud_and_forensics">https://www.researchgate.net/publication/277881581_Art_crime_Fraud_and_forensics</a></li>
+
+<li>फाइवएबल। (न.द.)। 1.3 कला चिकित्सा के सैद्धांतिक दृष्टिकोण। <a href="https://fiveable.me/art-therapy/unit-1/theoretical-approaches-art-therapy/study-guide/rabKguOGKxp9Gxzv">https://fiveable.me/art-therapy/unit-1/theoretical-approaches-art-therapy/study-guide/rabKguOGKxp9Gxzv</a></li>
+
+<li>फाइवएबल। (न.द.)। लोवेनफेल्ड के कलात्मक विकास के चरण। <a href="https://fiveable.me/art-therapy/unit-4/lowenfelds-stages-artistic-development/study-guide/lvH6f8kzpsxnEsoi">https://fiveable.me/art-therapy/unit-4/lowenfelds-stages-artistic-development/study-guide/lvH6f8kzpsxnEsoi</a></li>
+
+<li>फ्लड, ए. (2024)। बाल कला पर विकासात्मक समीक्षा। अमेरिकन रिसर्च जर्नल्स। <a href="https://www.arjonline.org/papers/arjhss/v2-i1/17.pdf">https://www.arjonline.org/papers/arjhss/v2-i1/17.pdf</a></li>
+
+<li>फ्रिथ, ई., और अन्य। (2021)। अत्यधिक रचनात्मक कलाकारों और वैज्ञानिकों का एक मनोमितीय नेटवर्क विश्लेषण। क्रिएटिविटी रिसर्च जर्नल। <a href="https://par.nsf.gov/servlets/purl/10435676">https://par.nsf.gov/servlets/purl/10435676</a></li>
+
+<li>गेरिटसन, जे. (2024)। रंगों पर विचार: डिजिटल इंटरफेस में रंग के उपयोग को बेहतर बनाने के लिए मनोविज्ञान का अनुप्रयोग। जर्नल ऑफ कंप्यूटर एंड कम्युनिकेशंस, 12(10)। <a href="https://www.scirp.org/journal/paperinformation?paperid=137279">https://www.scirp.org/journal/paperinformation?paperid=137279</a></li>
+
+<li>गुच, बी., और गुच, ए. (न.द.)। कंप्यूटर ग्राफिक्स के लिए रामचंद्रन और हिर्स्टीन के सौंदर्यशास्त्र के तंत्रिका संबंधी सिद्धांत। नार्थवेस्टर्न यूनिवर्सिटी। <a href="https://users.cs.northwestern.edu/~bgooch/PDFs/Aesthetics.pdf">https://users.cs.northwestern.edu/~bgooch/PDFs/Aesthetics.pdf</a></li>
+
+<li>गोमेज़-पुएर्तो, जी., और अन्य। (2016)। एक अनुभवजन्य सौंदर्यशास्त्र के लिए सैद्धांतिक आधार। रिसर्चगेट। <a href="https://www.researchgate.net/publication/290649885_Theoretical_foundations_for_an_empirical_aesthetics">https://www.researchgate.net/publication/290649885_Theoretical_foundations_for_an_empirical_aesthetics</a></li>
+
+<li>हैदरी, ए. (2024)। कला और न्यूरोएस्थेटिक्स: कला के प्रति मस्तिष्क की प्रतिक्रिया को समझना। रिसर्चगेट। <a href="https://www.researchgate.net/publication/383083489_Art_and_Neuroaesthetics_Understanding_the_Brain's_Response_to_Art">https://www.researchgate.net/publication/383083489_Art_and_Neuroaesthetics_Understanding_the_Brain's_Response_to_Art</a></li>
+
+<li>हर्ट्ज़मैन, ए. (2007)। कला का विज्ञान। यूनिवर्सिटी ऑफ टोरंटो। <a href="https://www.dgp.toronto.edu/~hertzman/courses/csc2521/fall_2007/ramachandran-science-art.pdf">https://www.dgp.toronto.edu/~hertzman/courses/csc2521/fall_2007/ramachandran-science-art.pdf</a></li>
+
+<li>होआंग, एम. (2024)। उपयोगकर्ता अनुभव पर दृश्य और संवादात्मक डिज़ाइन का प्रभाव: वॉल्ट के एप्लिकेशन और उपयोगकर्ता व्यवहार का एक केस स्टडी। थीसियस। <a href="https://www.theseus.fi/bitstream/handle/10024/877355/Hoang_Mai.pdf?sequence=2&isAllowed=y">https://www.theseus.fi/bitstream/handle/10024/877355/Hoang_Mai.pdf?sequence=2&isAllowed=y</a></li>
+
+<li>हु, डब्ल्यू., और अन्य। (2021)। रचनात्मक संभावित गुणों का आकलन करने के लिए एक प्रश्नावली का विकास और सत्यापन। फ्रंटियर्स इन साइकोलॉजी, 12। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8599797/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8599797/</a></li>
+
+<li>हुहटानेन, एस. (2025)। विरासत स्थलों पर भित्तिचित्र बर्बरता से निपटने के लिए सार्वजनिक नीति उपायों के प्रकार और प्रभावशीलता। एम.डी.पी.आई.। <a href="https://www.mdpi.com/2571-9408/8/1/18">https://www.mdpi.com/2571-9408/8/1/18</a></li>
+
+<li>इट्स आर्ट लॉ। (न.द.)। कला अपराधी बेनकाब: कला और आपराधिक प्रोफाइलिंग का कानून। <a href="https://itsartlaw.org/art-law/the-art-criminal-unmasked-art-and-the-law-of-criminal-profiling/">https://itsartlaw.org/art-law/the-art-criminal-unmasked-art-and-the-law-of-criminal-profiling/</a></li>
+
+<li>कोनेक्नी, वी. जे. (1996)। दो दशक बाद... डी. ई. बर्लिन। <a href="http://konecni.ucsd.edu/pdf/1996%20Two%20Decades%20Later...%20D.%20E.%20Berlyne%20ESA.pdf">http://konecni.ucsd.edu/pdf/1996%20Two%20Decades%20Later...%20D.%20E.%20Berlyne%20ESA.pdf</a></li>
+
+<li>कोज़बेल्ट, ए., बेघेट्टो, आर. ए., और रनको, एम. ए. (2019)। पूरे जीवन काल में रचनात्मकता के विकास को समझना। कैम्ब्रिज हैंडबुक ऑफ क्रिएटिविटी। <a href="https://www.cambridge.org/core/books/cambridge-handbook-of-creativity/understanding-the-development-of-creativity-across-the-life-span/7EC0AD9287725C3F273BEE243B06DA1F">https://www.cambridge.org/core/books/cambridge-handbook-of-creativity/understanding-the-development-of-creativity-across-the-life-span/7EC0AD9287725C3F273BEE243B06DA1F</a></li>
+
+<li>कोज़िनेट्स, आर. वी. (2024)। डिजिटल बर्बरता और कलात्मक अभिव्यक्ति: मीडिया, कला और नैतिकता के चौराहे पर नेविगेट करना। रिसर्चगेट। <a href="https://www.researchgate.net/publication/388754336_Digital_Vandalism_and_Artistic_Expression_Navigating_the_Intersection_of_Media_Art_and_Ethics">https://www.researchgate.net/publication/388754336_Digital_Vandalism_and_Artistic_Expression_Navigating_the_Intersection_of_Media_Art_and_Ethics</a></li>
+
+<li>ली, जे., और अन्य। (2022)। खुद को चित्रित करें: बच्चों के रेखाचित्रों को संस्कृति कैसे प्रभावित करती है। फ्रंटियर्स इन साइकोलॉजी, 13। <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.940617/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.940617/full</a></li>
+
+<li>लिंडेनवुड यूनिवर्सिटी। (न.द.)। दृश्य धारणा की शक्ति: दृश्य कलाओं को आकार देना। <a href="https://www.lindenwood.edu/blog/the-power-of-visual-perception-the-intricate-interplay-that-shapes-the-visual-arts/">https://www.lindenwood.edu/blog/the-power-of-visual-perception-the-intricate-interplay-that-shapes-the-visual-arts/</a></li>
+
+<li>लॉन्ग, एच. (2014)। उत्पाद रचनात्मकता के मूल्यांकन के दृष्टिकोणों की समीक्षा। ओ.एस.एफ.। <a href="https://osf.io/download/7d4av">https://osf.io/download/7d4av</a></li>
+
+<li>लोवेनफेल्ड, वी. (न.द.)। लोवेनफेल्ड के कलात्मक विकास चरण। स्क्रैबड। <a href="https://www.scribd.com/document/36485725/LOWENFELD">https://www.scribd.com/document/36485725/LOWENFELD</a></li>
+
+<li>लू, जे., और वांग, एक्स. (2024)। दृश्य संचार डिज़ाइन में दृश्य प्रासंगिक धारणा और उपयोगकर्ता भावनात्मक प्रतिक्रिया। साइंटिफिक रिपोर्ट्स। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11951664/">https://pmc.ncbi.nlm.nih.gov/articles/PMC11951664/</a></li>
+
+<li>लुम्सडेन, डी. बी. (2023)। अनुभवजन्य सौंदर्यशास्त्र के सौ वर्ष: फेचनर से बर्लिन तक। रिसर्चगेट। <a href="https://www.researchgate.net/publication/367125854_One_Hundred_Years_of_Empirical_Aesthetics_Fechner_to_Berlyne_1876-1976">https://www.researchgate.net/publication/367125854_One_Hundred_Years_of_Empirical_Aesthetics_Fechner_to_Berlyne_1876-1976</a></li>
+
+<li>लुओ, जे., और अन्य। (2025)। शैक्षणिक प्रदर्शन को बेहतर बनाने में रचनात्मकता का न्यूरोकॉग्निटिव प्रोफाइल। एम.डी.पी.आई.। <a href="https://www.mdpi.com/2227-7102/13/11/1127">https://www.mdpi.com/2227-7102/13/11/1127</a></li>
+
+<li>लुओ, एक्स., और अन्य। (2020)। रिमोट एसोसिएट्स टेस्ट लागू करने वाले रचनात्मकता संबंधी अध्ययनों की समीक्षा। फ्रंटियर्स इन साइकोलॉजी, 11। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7644781/">https://pmc.ncbi.nlm.nih.gov/articles/PMC7644781/</a></li>
+
+<li>मैकडोनाल्ड, आर., और अन्य। (2017)। संगीत प्राथमिकता के लिए उलटा-यू आकार की ओर वापसी: साहित्य की समीक्षा। संगीत का मनोविज्ञान। <a href="https://www.researchgate.net/publication/316051697_Back_to_the_inverted-U_for_music_preference_A_review_of_the_literature">https://www.researchgate.net/publication/316051697_Back_to_the_inverted-U_for_music_preference_A_review_of_the_literature</a></li>
+
+<li>मालचिओडी, सी. (न.द.)। पुस्तकें और प्रकाशन। <a href="https://cathymalchiodi.com/books/">https://cathymalchiodi.com/books/</a></li>
+
+<li>मैकगोवन, जी. (न.द.)। न्यूरोएस्थेटिक्स और रामचंद्रन के आठ नियम। <a href="https://gerritmcgowan.com/neuroaesthetics-and-ramachandrans-eight-laws-for-product-design/">https://gerritmcgowan.com/neuroaesthetics-and-ramachandrans-eight-laws-for-product-design/</a></li>
+
+<li>नाडल, एम., और स्कोव, एम. (2015)। न्यूरोएस्थेटिक्स। रिसर्चगेट। <a href="https://www.researchgate.net/publication/277075886_Neuroesthetics">https://www.researchgate.net/publication/277075886_Neuroesthetics</a></li>
+
+<li>निया, एस. एस., और अन्य। (2023)। सामुदायिक रचनात्मक वृद्धावस्था को बढ़ावा देने के लिए सौंदर्य सह-निर्माण कार्यक्रम। एम.डी.पी.आई.। <a href="https://www.mdpi.com/2227-9032/11/4/516">https://www.mdpi.com/2227-9032/11/4/516</a></li>
+
+<li>ओलंपिक बिहेवियरल हेल्थ। (न.द.)। मनोविज्ञान में कला चिकित्सा क्या है? 16 सिद्धांत। <a href="https://olympicbehavioralhealth.com/therapies/art/">https://olympicbehavioralhealth.com/therapies/art/</a></li>
+
+<li>ऊस्टरविज्क, एस. (न.द.)। अनिश्चित कला की धारणा के लिए मनोभौतिकी। रिसर्चगेट। <a href="https://www.researchgate.net/publication/221283100_Psychophysics_for_perception_of_indeterminate_art">https://www.researchgate.net/publication/221283100_Psychophysics_for_perception_of_indeterminate_art</a></li>
+
+<li>ओराकसी, एस. (2025)। बच्चों का रेखाचित्र और ग्राफिक विकास: लोवेनफेल्ड के चरणों का अनुभवजन्य अध्ययन। एम.डी.पी.आई.। <a href="https://www.mdpi.com/2227-7102/15/6/681">https://www.mdpi.com/2227-7102/15/6/681</a></li>
+
+<li>पैंग, सी. (न.द.)। आर्नहाइम का कला और फोटोग्राफी का मनोविज्ञान। <a href="https://www.creative-wisdom.com/photography/photo_essay/dynamic.html">https://www.creative-wisdom.com/photography/photo_essay/dynamic.html</a></li>
+
+<li>पापी-गार्सीया, एम. ए., और अन्य। (2020)। बच्चों में मनोसामाजिक समस्याओं के लिए कला चिकित्सा: एक व्यवस्थित समीक्षा। फ्रंटियर्स इन साइकोलॉजी, 11। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7578380/">https://pmc.ncbi.nlm.nih.gov/articles/PMC7578380/</a></li>
+
+<li>प्लकर, जे. ए., और माकेल, एम. सी. (2010)। रचनात्मकता का आकलन। कैम्ब्रिज हैंडबुक ऑफ क्रिएटिविटी। <a href="https://www.cambridge.org/core/books/cambridge-handbook-of-creativity/assessment-of-creativity/3B2C56C697932BB0C582C54B26D916D9">https://www.cambridge.org/core/books/cambridge-handbook-of-creativity/assessment-of-creativity/3B2C56C697932BB0C582C54B26D916D9</a></li>
+
+<li>रामचंद्रन, वी. एस., और हर्स्टीन, डब्ल्यू. (1999)। कला का विज्ञान: सौंदर्य अनुभव का एक तंत्रिका संबंधी सिद्धांत। जर्नल ऑफ कॉन्शसनेस स्टडीज, 6(6-7)। <a href="https://scispace.com/pdf/the-science-of-art-a-neurological-theory-of-aesthetic-461jgz377r.pdf">https://scispace.com/pdf/the-science-of-art-a-neurological-theory-of-aesthetic-461jgz377r.pdf</a></li>
+
+<li>रेबर, आर. (2024)। कला और विज्ञान को जोड़ना: सौंदर्यशास्त्र के मनोविज्ञान के लिए एक रूपरेखा। ओपन एच.एस.यू.। <a href="https://openhsu.ub.hsu-hh.de/bitstreams/10943243-93b1-4307-aa8f-8a54b8599f2d/download">https://openhsu.ub.hsu-hh.de/bitstreams/10943243-93b1-4307-aa8f-8a54b8599f2d/download</a></li>
+
+<li>राइटर-पाल्मोन, आर., और अन्य। (2012)। स्व-रिपोर्ट पैमानों के साथ रचनात्मकता का आकलन। सौंदर्यशास्त्र, रचनात्मकता और कला का मनोविज्ञान। <a href="https://scispace.com/pdf/assessing-creativity-with-self-report-scales-a-review-and-xi226rklgg.pdf">https://scispace.com/pdf/assessing-creativity-with-self-report-scales-a-review-and-xi226rklgg.pdf</a></li>
+
+<li>रनको, एम. ए. (न.द.)। रचनात्मकता। <a href="https://people.wku.edu/richard.miller/creativity.pdf">https://people.wku.edu/richard.miller/creativity.pdf</a></li>
+
+<li>सैद-मेटवेली, एस., और अन्य। (2018)। रचनात्मकता को मापने के दृष्टिकोण: एक व्यवस्थित समीक्षा। रिसर्चगेट। <a href="https://www.researchgate.net/publication/322859368_Approaches_to_Measuring_Creativity_A_Systematic_Literature_Review">https://www.researchgate.org/publication/322859368_Approaches_to_Measuring_Creativity_A_Systematic_Literature_Review</a></li>
+
+<li>शारिएटर, पी., और अन्य। (2024)। मनोवैज्ञानिक आघात के लिए आघात-केंद्रित कला चिकित्सा की प्रभावशीलता। पी.एम.सी.। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10826536/">https://pmc.ncbi.nlm.nih.gov/articles/PMC10826536/</a></li>
+
+<li>स्कोव, एम. (2023)। न्यूरोएस्थेटिक्स। क्या विज्ञान कला की व्याख्या कर सकता है? रिसर्चगेट। <a href="https://www.researchgate.net/publication/281808285_Introduction_-_Neuroaesthetics_Can_Science_explain_art">https://www.researchgate.net/publication/281808285_Introduction_-_Neuroaesthetics_Can_Science_explain_art</a></li>
+
+<li>स्मिथ, ए. जे., और स्मिथ, जे. के. (2019)। सौंदर्यशास्त्र और कला के मनोविज्ञान की कैम्ब्रिज हैंडबुक। कैम्ब्रिज यूनिवर्सिटी प्रेस। <a href="https://www.cambridge.org/core/books/cambridge-handbook-of-the-psychology-of-aesthetics-and-the-arts/concepts-theories-and-methods/15AFD7EC5E82BCEA1F2A96F048FDEF3E">https://www.cambridge.org/core/books/cambridge-handbook-of-the-psychology-of-aesthetics-and-the-arts/concepts-theories-and-methods/15AFD7EC5E82BCEA1F2A96F048FDEF3E</a></li>
+
+<li>स्टमाटोपुलु, डी. (2018)। रचनात्मक प्रक्रिया की खोज: मनोमितीय और आई-ट्रैकिंग दृष्टिकोण। फ्रंटियर्स इन साइकोलॉजी, 9। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6190897/">https://pmc.ncbi.nlm.nih.gov/articles/PMC6190897/</a></li>
+
+<li>टेलर, जी. (2018)। अमेरिकी कला संस्थानों में कला चोरी, बर्बरता और संरक्षण। एम.डी.पी.आई.। <a href="https://www.mdpi.com/2076-0752/7/3/23">https://www.mdpi.com/2076-0752/7/3/23</a></li>
+
+<li>टिनियो, पी. पी. एल., और स्मिथ, जे. के. (2014)। कला और मानव विकास। <a href="https://www.giarts.org/sites/default/files/Arts-and-Human-Development.pdf">https://www.giarts.org/sites/default/files/Arts-and-Human-Development.pdf</a></li>
+
+<li>टोंग, जेड. (2024)। ग्राफिक दृश्य संचार डिज़ाइन पर शोध। रिसर्चगेट। <a href="https://www.researchgate.net/publication/380833150_Research_on_Graphic_Visual_Communication_Design_for_User_Perception_Experience">https://www.researchgate.net/publication/380833150_Research_on_Graphic_Visual_Communication_Design_for_User_Perception_Experience</a></li>
+
+<li>यू.एक्स. मैगजीन। (2026, जनवरी)। यू.आई./यू.एक्स. डिज़ाइन में रंगों का मनोविज्ञान। <a href="https://uxmag.medium.com/the-psychology-of-color-in-ui-ux-design-74ca4e8418cd">https://uxmag.medium.com/the-psychology-of-color-in-ui-ux-design-74ca4e8418cd</a></li>
+
+<li>वैंडेवेर्टरिंग, एम. (न.द.)। दृश्य मनोभौतिकी। रिसर्चगेट। <a href="https://www.researchgate.net/publication/21006623_Visual_Psychophysics_of_Simple_Graphical_Elements">https://www.researchgate.net/publication/21006623_Visual_Psychophysics_of_Simple_Graphical_Elements</a></li>
+
+<li>वेसल, ई. ए., और अन्य। (2010)। सौंदर्य और मस्तिष्क। मस्तिष्क अनुसंधान में प्रगति। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2815941/">https://pmc.ncbi.nlm.nih.gov/articles/PMC2815941/</a></li>
+
+<li>विश्वकर्मा, एस., और अन्य। (2024)। दृश्य संचार मनोविज्ञान। रिसर्चगेट। <a href="https://www.researchgate.net/publication/395726619_Visual_Communication_Psychology_Empirical_Evidence_from_Color_Layout_and_Typography_Manipulations">https://www.researchgate.net/publication/395726619_Visual_Communication_Psychology_Empirical_Evidence_from_Color_Layout_and_Typography_Manipulations</a></li>
+
+<li>वेई, जी., और अन्य। (2015)। मस्तिष्क संरचना और रचनात्मक गुण। सोशल कॉग्निटिव एंड अफेक्टिव न्यूरोसाइंस। <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4321617/">https://pmc.ncbi.nlm.nih.gov/articles/PMC4321617/</a></li>
+
+<li>झू, वाई. (2020)। जूनियर हाई स्कूल में कला प्रशंसा में आर्नहाइम के सिद्धांत की खोज। रिसर्चगेट। <a href="https://www.researchgate.net/publication/347278655_The_Exploration_of_Arnheim's_Theory_of_Visual_Perception_in_the_Field_of_Art_Appreciation_and_Review_in_Junior_High_School">https://www.researchgate.net/publication/347278655_The_Exploration_of_Arnheim's_Theory_of_Visual_Perception_in_the_Field_of_Art_Appreciation_and_Review_in_Junior_High_School</a></li>
+    </ul>
+</div>
+
+  </div>
+</body>
+</html>
