@@ -25,16 +25,13 @@
   .page{min-height:100vh;display:flex;align-items:stretch;justify-content:center;padding:0;margin:0;box-sizing:border-box}
   .wrap{width:100%;display:flex;min-height:100vh;box-sizing:border-box;overflow:hidden}
 
-  /* LEFT HERO COLUMN */
-.bg{
-  flex: 1 1 56%;
-  position: relative;
-  min-width: 300px;
-  background: #cccccc url('bg.jpeg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* LEFT HERO COLUMN */
+  .hero {
+    flex: 1 1 56%;
+    position: relative;
+    min-width: 300px;
+    background: #cccccc url('bg.jpeg') center/cover no-repeat;
+  }
 
   /* RIGHT PANEL (TEXT) */
   .panel{
@@ -82,7 +79,7 @@
     <div class="wrap" role="main" aria-labelledby="site-title">
       
       <!-- LEFT HERO COLUMN -->
-      <div class="hero" style="background-image: url('bg.jpeg'); height: 500px; background-size: cover;" aria-hidden="true"></div>
+      <div class="hero" aria-hidden="true"></div>
 
       <!-- RIGHT PANEL -->
       <aside class="panel" aria-labelledby="site-title">
@@ -153,4 +150,5 @@ Nivrittisneh Sutrakala means approaching to study art through romantic discovery
   </div>
 </body>
 </html>
+
 
