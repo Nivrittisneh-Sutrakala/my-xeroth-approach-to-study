@@ -1,379 +1,96 @@
 <html lang="hi">
-
 <head>
-
   <meta charset="utf-8" />
-
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Nivrittisneh Sutrakala — Home (EN)</title>
-
+  <title>Nivrittisneh Sutrakala — Home (HI)</title>
   <meta name="description" content="Nivrittisneh Sutrakala — studying art as romantic discovery." />
-
   <style>
-
-    :root{
-
-      --panel-bg:#fdeef0;   /* pale rose */
-
-      --accent:#9b2226;     /* deep red */
-
-      --text:#2b2b2b;
-
-      --muted:#5a4b4b;
-
-      --max-width:1100px;
-
+    :root {
+      --panel-bg: #fdeef0;   /* pale rose */
+      --accent: #9b2226;     /* deep red */
+      --text: #2b2b2b;
+      --muted: #5a4b4b;
+      --max-width: 1100px;
     }
-
-
 
     /* Base */
-
-    html,body{
-
-      height:100%;
-
-      margin:0;
-
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans Devanagari","Helvetica Neue",Arial;
-
-      background:#f6f6f6;
-
-      color:var(--text);
-
-      -webkit-font-smoothing:antialiased;
-
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Devanagari", "Helvetica Neue", Arial;
+      background: #f6f6f6;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
-
-
-    a{color:inherit;text-decoration:none}
-
-    .page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
-
-
+    a { color: inherit; text-decoration: none; }
+    .page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; }
 
     /* Boxed layout */
-
-    .wrap{
-
-      width:100%;
-
-      max-width:var(--max-width);
-
-      display:flex;
-
-      border-radius:18px;
-
-      overflow:hidden;
-
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-      background:#fff;
-
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+      display: flex;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      background: #fff;
+      min-height: 80vh;
     }
 
-
-
-    /* LEFT HERO COLUMN: background must be on .bg (this element exists in your HTML) */
-
-    .bg{
-
-      flex:1 1 56%;
-
-      min-width:300px;
-
-      position:relative;
-
-      /* Put your image file path here (case-sensitive on many servers) */
-
-      background-image: url('bg.jpeg');
-
-      background-position: center;
-
-      background-size: cover;
-
-      background-repeat: no-repeat;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
+    /* LEFT HERO COLUMN */
+    .bg {
+      flex: 1 1 56%;
+      min-width: 300px;
+      position: relative;
+      background: #cccccc url('bg.jpeg') center/cover no-repeat;
+      display: flex;
     }
-
-
 
     /* RIGHT PANEL (TEXT) */
-
-    .panel{
-
-      flex:1 1 44%;
-
-      background:var(--panel-bg);
-
-      padding:48px 40px;
-
-      box-sizing:border-box;
-
-      display:flex;
-
-      flex-direction:column;
-
-      justify-content:space-between;
-
-      overflow:auto;
-
+    .panel {
+      flex: 1 1 44%;
+      background: var(--panel-bg);
+      padding: 48px 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: auto;
     }
 
+    header.site-title { margin: 0 0 6px 0; }
+    header#site-title h1 { margin: 0; font-size: 36px; color: var(--accent); letter-spacing: 0.02em; }
+    header#site-title p.lead { margin: 12px 0 0 0; font-size: 12.5px; color: var(--text); line-height: 1.45; }
+    
+    .top-right { display: flex; justify-content: flex-end; gap: 12px; align-items: center; margin-bottom: 6px; }
+    .top-right a.lang { font-weight: 700; padding: 6px 8px; border-radius: 4px; }
+    .top-right a.lang.active { border-bottom: 3px solid var(--accent); color: var(--accent); }
+    
+    .manifesto { margin-top: 18px; color: var(--muted); line-height: 1.6; }
+    .links { margin-top: 18px; }
+    .links a { display: inline-block; margin-right: 12px; padding: 8px 10px; border-radius: 6px; font-weight: 700; background: transparent; border: 1px solid rgba(0,0,0,0.04); }
+    
+    .meta-list { margin-top: 22px; }
+    .meta-list ul { padding-left: 18px; margin-top: 10px; }
+    .meta-list li { margin: 8px 0; font-weight: 700; color: var(--text); }
+    
+    .about-row { margin-top: 26px; display: flex; align-items: center; gap: 14px; }
+    .about-row .arrow { font-size: 20px; color: var(--accent); }
+    .about-row a.about-link { font-size: 16px; font-weight: 700; color: var(--accent); text-decoration: none; }
+    
+    footer.sitefoot { margin-top: 20px; font-size: 13px; color: var(--muted); }
 
-
-    header.site-title{margin:0 0 6px 0}
-
-    header.site-title h1{margin:0;font-size:36px;color:var(--accent);letter-spacing:0.02em}
-
-    header.site-title p.lead{margin:12px 0 0 0;font-size:12.5px;color:var(--text);line-height:1.45;font-family:Calibri,'Segoe UI',Arial,sans-serif}
-
-    .top-right{display:flex;justify-content:flex-end;gap:12px;align-items:center;margin-bottom:6px}
-
-    .top-right a.lang{font-weight:700;padding:6px 8px;border-radius:4px}
-
-    .top-right a.lang.active{border-bottom:3px solid var(--accent);color:var(--accent)}
-
-    .manifesto{margin-top:18px;color:var(--muted);line-height:1.6}
-
-    .links{margin-top:18px}
-
-    .links a{display:inline-block;margin-right:12px;padding:8px 10px;border-radius:6px;font-weight:700;background:transparent;border:1px solid rgba(0,0,0,0.04)}
-
-    .meta-list{margin-top:22px}
-
-    .meta-list ul{padding-left:18px;margin-top:10px}
-
-    .meta-list li{margin:8px 0;font-weight:700;color:var(--text)}
-
-    .about-row{margin-top:26px;display:flex;align-items:center;gap:14px}
-
-    .about-row .arrow{font-size:20px;color:var(--accent)}
-
-    .about-row a.about-link{font-size:16px;font-weight:700;color:var(--accent);text-decoration:none}
-
-    footer.sitefoot{margin-top:20px;font-size:13px;color:var(--muted)}
-
-
-
-    /* Responsive: stack columns on narrow screens */
-
-    @media (max-width:900px){
-
-      .wrap{flex-direction:column}
-
-      .panel{padding:22px}
-
-      <html lang="hi">
-
-<head>
-
-  <meta charset="utf-8" />
-
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Nivrittisneh Sutrakala — Home (EN)</title>
-
-  <meta name="description" content="Nivrittisneh Sutrakala — studying art as romantic discovery." />
-
-  <style>
-
-    :root{
-
-      --panel-bg:#fdeef0;   /* pale rose */
-
-      --accent:#9b2226;     /* deep red */
-
-      --text:#2b2b2b;
-
-      --muted:#5a4b4b;
-
-      --max-width:1100px;
-
+    /* Responsive */
+    @media (max-width: 900px) {
+      .wrap { flex-direction: column; }
+      .bg { min-height: 300px; width: 100%; }
+      .panel { padding: 22px; }
     }
-
-
-
-    /* Base */
-
-    html,body{
-
-      height:100%;
-
-      margin:0;
-
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans Devanagari","Helvetica Neue",Arial;
-
-      background:#f6f6f6;
-
-      color:var(--text);
-
-      -webkit-font-smoothing:antialiased;
-
+    @media (max-width: 520px) {
+      header#site-title h1 { font-size: 22px; }
     }
-
-
-
-    a{color:inherit;text-decoration:none}
-
-    .page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
-
-
-
-    /* Boxed layout */
-
-    .wrap{
-
-      width:100%;
-
-      max-width:var(--max-width);
-
-      display:flex;
-
-      border-radius:18px;
-
-      overflow:hidden;
-
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-      background:#fff;
-
-    }
-
-
-
-    /* LEFT HERO COLUMN: background must be on .bg (this element exists in your HTML) */
-
-    .bg{
-
-      flex:1 1 56%;
-
-      min-width:300px;
-
-      position:relative;
-
-      /* Put your image file path here (case-sensitive on many servers) */
-
-      background-image: url('bg.jpeg');
-
-      background-position: center;
-
-      background-size: cover;
-
-      background-repeat: no-repeat;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-    }
-
-
-
-    /* RIGHT PANEL (TEXT) */
-
-    .panel{
-
-      flex:1 1 44%;
-
-      background:var(--panel-bg);
-
-      padding:48px 40px;
-
-      box-sizing:border-box;
-
-      display:flex;
-
-      flex-direction:column;
-
-      justify-content:space-between;
-
-      overflow:auto;
-
-    }
-
-
-
-    header.site-title{margin:0 0 6px 0}
-
-    header.site-title h1{margin:0;font-size:36px;color:var(--accent);letter-spacing:0.02em}
-
-    header.site-title p.lead{margin:12px 0 0 0;font-size:12.5px;color:var(--text);line-height:1.45;font-family:Calibri,'Segoe UI',Arial,sans-serif}
-
-    .top-right{display:flex;justify-content:flex-end;gap:12px;align-items:center;margin-bottom:6px}
-
-    .top-right a.lang{font-weight:700;padding:6px 8px;border-radius:4px}
-
-    .top-right a.lang.active{border-bottom:3px solid var(--accent);color:var(--accent)}
-
-    .manifesto{margin-top:18px;color:var(--muted);line-height:1.6}
-
-    .links{margin-top:18px}
-
-    .links a{display:inline-block;margin-right:12px;padding:8px 10px;border-radius:6px;font-weight:700;background:transparent;border:1px solid rgba(0,0,0,0.04)}
-
-    .meta-list{margin-top:22px}
-
-    .meta-list ul{padding-left:18px;margin-top:10px}
-
-    .meta-list li{margin:8px 0;font-weight:700;color:var(--text)}
-
-    .about-row{margin-top:26px;display:flex;align-items:center;gap:14px}
-
-    .about-row .arrow{font-size:20px;color:var(--accent)}
-
-    .about-row a.about-link{font-size:16px;font-weight:700;color:var(--accent);text-decoration:none}
-
-    footer.sitefoot{margin-top:20px;font-size:13px;color:var(--muted)}
-
-
-
-    /* Responsive: stack columns on narrow screens */
-
-    @media (max-width:900px){
-
-      .wrap{flex-direction:column}
-
-      .panel{padding:22px}
-
-      .bg{min-height:220px} /* keep left area visible on small screens */
-
-    }
-
-    @media (max-width:520px){
-
-      header.site-title h1{font-size:22px}
-
-      .about-row a.about-link{font-size:15px}
-
-    }
-
   </style>
-
-</head> /* keep left area visible on small screens */
-
-    }
-
-    @media (max-width:520px){
-
-      header.site-title h1{font-size:22px}
-
-      .about-row a.about-link{font-size:15px}
-
-    }
-
-  </style>
-
 </head>
 <body>
   <div class="page">
@@ -391,29 +108,15 @@
           <header id="site-title">
             <h1>निवृत्तिस्नेह सूत्रकला</h1>
             <p class="lead">
-              निवृत्तिस्नेह सूत्रकला का अर्थ है, कला के अध्ययन को स्वच्छंदतावादी अन्वेषण की दृष्टि से अपनाना, ताकि सत्ता के गलियारों और गलाकाट प्रतिस्पर्धा वाली इस यांत्रिक दुनिया के मोहपाश से विरक्त होकर मानसिक पुनरुद्धार हेतु एकांत प्राप्त किया जा सके। इस उद्देश्य की प्राप्ति के लिए मैंने यह स्वतंत्र मीडिया आउटलेट के सदृश एक ऑनलाइन रचनात्मक स्टूडियो (या संभवतः एक ब्लॉग-साइट, जिसके लिए मैं अभी सटीक शब्द चयन नहीं कर पा रहा हूँ) इसे बनाया।
+              निवृत्तिस्नेह सूत्रकला का अर्थ है, कला के अध्ययन को स्वच्छंदतावादी अन्वेषण की दृष्टि से अपनाना, ताकि सत्ता के गलियारों और गलाकाट प्रतिस्पर्धा वाली इस यांत्रिक दुनिया के मोहपाश से विरक्त होकर मानसिक पुनरुद्धार हेतु एकांत प्राप्त किया जा सके।
             </p>
           </header>
           
-          <hr style="border:none; border-top:1px solid #2b2b2b; margin:5mm 8mm;">
+          <hr style="border:none; border-top:1px solid #2b2b2b; margin:20px 0;">
 
           <div class="manifesto">
-            <p>
-                कला मानवीय कृत्रिमता की वह सर्वोत्कृष्ट परिणति है, जहाँ सर्जक पारंपरिक बोध की सीमाओं को लांघकर अपनी कोरी सौंदर्यात्मक अंतर्दृष्टि को एक गहन और अलौकिक अनुभव में रूपांतरित कर देता है। स्नातक काल के दौरान, मैंने इसे मात्र एक विधा नहीं, अपितु एक शास्त्रीय विषय के रूप में आत्मसात करने का प्रयास किया।
-            </p>
-            
-            <p>
-                एक बहु-विषयक विचारक होने के नाते, यद्यपि मेरी अभिव्यक्ति अनौपचारिक प्रतीत हो सकती है, किंतु मेरा दृष्टिकोण पूर्णतः अकादमिक शोध पद्धति के अनुरूप रहा है। इसमें वैचारिक बोध, स्थानिक कौशल और यथार्थपरक अवलोकन का त्रिवेणी संगम निहित है।
-            </p>
-           
-            <p>
-                मैंने इस अध्ययन का सूत्रपात रूप, शैली, सांस्कृतिक मर्म और पारंपरिक ज्ञान जैसे मुख्य संप्रत्ययों को समझकर किया, जहाँ मेरा बल रटंत विद्या के स्थान पर सृजन, व्याख्या और हस्तांतरण की प्रक्रियाओं पर रहा। विभिन्न माध्यमों, तकनीकों और दस्तावेजीकरण के उपकरणों का उपयोग करते हुए मैंने दृश्य एवं संवेदी विश्लेषण में दक्षता प्राप्त की। 
-            </p>
-            
-            <p>
-                अंततः, सौंदर्यात्मक, सांस्कृतिक और वैज्ञानिक आयामों के अंतर्संबंधों को जोड़कर मैंने उन प्रतिमानों को समझा जो इस अध्ययन को चिंतनशील और व्यावहारिक बनाते हैं। मानवीय कृत्रिमता की इस पराकाष्ठा को, जो बोध की परिधियों को विस्तार देकर अंतर्दृष्टि को दिव्यता प्रदान करती है, मैंने निम्नलिखित तीन शाखाओं में विभक्त किया है:
-            </p>
-
+            <p>कला मानवीय कृत्रिमता की वह सर्वोत्कृष्ट परिणति है, जहाँ सर्जक पारंपरिक बोध की सीमाओं को लांघकर अपनी कोरी सौंदर्यात्मक अंतर्दृष्टि को एक गहन और अलौकिक अनुभव में रूपांतरित कर देता है।</p>
+            <p>एक बहु-विषयक विचारक होने के नाते, यद्यपि मेरी अभिव्यक्ति अनौपचारिक प्रतीत हो सकती है, किंतु मेरा दृष्टिकोण पूर्णतः अकादमिक शोध पद्धति के अनुरूप रहा है।</p>
             <div class="links">
               <a href="history-hi.html">कला इतिहास</a>
               <a href="criticism-hi.html">कला समीक्षा</a>
@@ -422,25 +125,11 @@
           </div>
 
           <div class="meta-list">
-            <h3 style="margin:12px 0 6px 0;color:var(--accent)">
-              अन्य (नॉन-पीयर) मेटा-विश्लेषण
-            </h3>
+            <h3 style="margin:12px 0 6px 0;color:var(--accent)">अन्य मेटा-विश्लेषण</h3>
             <ul>
-              <li>
-                <a href="psychology-hi.html">
-                  कलात्मक अभिव्यक्ति द्वारा मानसिक स्वास्थ्य एवं मनोवैज्ञानिक मीमांसा
-                </a>
-              </li>
-              <li>
-                <a href="literature-hi.html">
-                  दृश्य भाषा एवं कला का प्रखर आलोचनात्मक विवेचन
-                </a>
-              </li>
-              <li>
-                <a href="anthropology-hi.html">
-                  प्रदर्शकारी कलाएँ एवं सांस्कृतिक नृविज्ञान
-                </a>
-              </li>
+              <li><a href="psychology-hi.html">मानसिक स्वास्थ्य एवं मनोविज्ञान</a></li>
+              <li><a href="literature-hi.html">दृश्य भाषा एवं विवेचन</a></li>
+              <li><a href="anthropology-hi.html">सांस्कृतिक नृविज्ञान</a></li>
             </ul>
           </div>
 
@@ -454,4 +143,4 @@
     </div>
   </div>
 </body>
-
+</html>
