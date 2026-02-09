@@ -1,122 +1,129 @@
+<!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nivrittisneh Sutrakala — Home (HI)</title>
+  <title>Nivrittisneh Sutrakala</title>
   <style>
     :root {
-      --panel-bg: #fdeef0;
-      --accent: #9b2226;
-      --text: #2b2b2b;
-      --muted: #5a4b4b;
-      --max-width: 1100px;
+      /* Matching the screenshot's soft cream/rose background */
+      --panel-bg: #fdf5f5; 
+      --text-main: #1a1a1a;
+      --text-muted: #4a4a4a;
+      --accent: #8b2635; /* Deep reddish-brown for the UI elements */
     }
 
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Devanagari", "Helvetica Neue", Arial;
-      background: #f6f6f6;
-      color: var(--text);
-    }
-
-    .page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; }
-
-    .wrap {
-      width: 100%;
-      max-width: var(--max-width);
+      padding: 40px 20px;
+      background-color: #f0f0f0; /* Light grey page background */
+      font-family: 'Segoe UI', Roboto, "Noto Sans Devanagari", sans-serif;
       display: flex;
-      border-radius: 18px;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* The Main Card Container */
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
-    .bg {
-      flex: 1 1 56%;
-      min-width: 300px;
-      background: #ccc url('bg.jpeg') center/cover no-repeat;
+    /* Left Side: The Image */
+    .image-section {
+      flex: 1;
+      background: url('your-image-url.jpg') center center / cover no-repeat;
+      min-height: 600px;
     }
 
-    .panel {
-      flex: 1 1 44%;
-      background: var(--panel-bg);
-      padding: 48px 40px;
-      box-sizing: border-box;
+    /* Right Side: The Content */
+    .content-section {
+      flex: 1;
+      background-color: var(--panel-bg);
+      padding: 60px 50px;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
-    h1 { margin: 0; font-size: 36px; color: var(--accent); }
-    .lead { margin: 12px 0 0 0; font-size: 13px; line-height: 1.45; color: var(--text); }
-    .top-right { display: flex; justify-content: flex-end; gap: 12px; margin-bottom: 20px; }
-    .lang { font-weight: 700; text-decoration: none; padding: 4px; }
-    .active { border-bottom: 3px solid var(--accent); color: var(--accent); }
-    
-    .manifesto { margin-top: 20px; color: var(--muted); line-height: 1.6; }
-    .links { margin-top: 18px; }
-    .links a { display: inline-block; margin-right: 12px; padding: 8px 12px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(0,0,0,0.1); text-decoration: none; }
-    
-    .meta-list { margin-top: 22px; }
-    .meta-list ul { padding-left: 18px; }
-    .meta-list a { text-decoration: none; font-weight: 700; }
-    
-    .about-row { margin-top: 30px; display: flex; align-items: center; gap: 10px; }
-    .about-link { font-weight: 700; color: var(--accent); text-decoration: none; }
+    /* Language Switcher */
+    .lang-switcher {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .lang-switcher a {
+      text-decoration: none;
+      color: #999;
+      margin-left: 15px;
+      padding-bottom: 2px;
+    }
+    .lang-switcher a.active {
+      color: #000;
+      border-bottom: 2px solid var(--accent);
+    }
 
-    @media (max-width: 900px) {
-      .wrap { flex-direction: column; }
-      .bg { min-height: 250px; }
-      .panel { padding: 30px 20px; }
+    /* Text Styling */
+    h1 {
+      font-size: 42px;
+      margin: 40px 0 20px 0;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+    }
+
+    .description {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .body-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* Responsive for Mobile */
+    @media (max-width: 850px) {
+      .container { flex-direction: column; }
+      .image-section { min-height: 300px; }
+      .content-section { padding: 40px 25px; }
+      h1 { font-size: 32px; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="wrap">
-      
-      <div class="bg"></div>
 
-      <aside class="panel">
-        <div class="top-right">
-          <a href="infographics.html" class="lang">EN</a>
-          <a href="index.html" class="lang active">HI</a>
-        </div>
+  <div class="container">
+    <div class="image-section"></div>
 
-        <header id="site-title">
-          <h1>निवृत्तिस्नेह सूत्रकला</h1>
-          <p class="lead">
-            निवृत्तिस्नेह सूत्रकला का अर्थ है, कला के अध्ययन को स्वच्छंदतावादी अन्वेषण की दृष्टि से अपनाना।
-          </p>
-        </header>
-        
-        <hr style="border:none; border-top:1px solid #ccc; margin: 20px 0;">
+    <div class="content-section">
+      <div class="lang-switcher">
+        <a href="#">EN</a>
+        <a href="#" class="active">HI</a>
+      </div>
 
-        <div class="manifesto">
-          <p>कला मानवीय कृत्रिमता की वह सर्वोत्कृष्ट परिणति है। स्नातक काल के दौरान, मैंने इसे मात्र एक विधा नहीं, अपितु एक शास्त्रीय विषय के रूप में आत्मसात करने का प्रयास किया।</p>
-          
-          <div class="links">
-            <a href="history-hi.html">कला इतिहास</a>
-            <a href="criticism-hi.html">कला समीक्षा</a>
-            <a href="aesthetics-hi.html">सौंदर्यशास्त्र</a>
-          </div>
-        </div>
+      <h1>निवृत्तिस्नेह सूत्रकला</h1>
 
-        <div class="meta-list">
-          <h3 style="color:var(--accent)">अन्य मेटा-विश्लेषण</h3>
-          <ul>
-            <li><a href="psychology-hi.html">मानसिक स्वास्थ्य एवं मनोविज्ञान</a></li>
-            <li><a href="literature-hi.html">दृश्य भाषा एवं विवेचन</a></li>
-            <li><a href="anthropology-hi.html">सांस्कृतिक नृविज्ञान</a></li>
-          </ul>
-        </div>
+      <div class="description">
+        निवृत्तिस्नेह सूत्रकला का अर्थ है, कला के अध्ययन को स्वच्छंदतावादी अन्वेषण की दृष्टि से अपनाना, ताकि सत्ता के गलियारों और गलाकाट प्रतिस्पर्धा वाली इस यांत्रिक दुनिया के मोहपाश से विरक्त होकर मानसिक पुनरुद्धार हेतु एकांत प्राप्त किया जा सके।
+      </div>
 
-        <div class="about-row">
-          <span style="color:var(--accent); font-size: 20px;">→</span>
-          <a class="about-link" href="about-hi.html">संकलन-कर्ता का परिचय</a>
-        </div>
-      </aside>
+      <div class="body-text">
+        <p>कला मानवीय कृत्रिमता की वह सर्वोत्कृष्ट परिणति है, जहाँ सर्जक पारंपरिक बोध की सीमाओं को लांघकर अपनी कोरी सौंदर्यात्मक अंतर्दृष्टि को एक गहन और अलौकिक अनुभव में रूपांतरित कर देता है। स्नातक काल के दौरान, मैंने इसे मात्र एक विधा नहीं, अपितु एक शास्त्रीय विषय के रूप में आत्मसात करने का प्रयास किया।</p>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
